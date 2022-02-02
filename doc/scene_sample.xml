@@ -1,0 +1,91 @@
+<scene>
+	<objects>
+		<sphere>
+			<!-- Name of the object.-->
+			<!-- Type: string -->
+			<name>Sphere1</name>
+			<!-- 3D Cartesian coordinates indicating the center of the object. -->
+			<!-- Type: double for each --> 
+			<location>
+				<x>0.0</x>
+				<y>-1.234</y>
+				<z>0.0</z>
+			</location>
+			<!-- Radius of the sphere -->
+			<!-- Type: double -->
+			<radius>5.0</radius>
+			<!-- How much light the object emits. Given per each color -->
+			<!-- Type: double between 0 and 1 for each -->
+			<emissivity>
+				<red>1</red>
+				<green>1</green>
+				<blue>1</blue>
+			</emissivity>
+			<!-- Color of the object -->
+			<!-- Type: double between 0 and 1 for each. -->
+			<color>
+				<red>0</red>
+				<green>0</green>
+				<blue>0</blue>
+			</color>
+			<!-- How much light the object reflects. Value between 0 and 1. High values make the object metallic.-->
+			<!-- Type: double -->
+			<specularity>0.05</specularity>
+		</sphere>
+		<mesh>
+			<!-- Name of the object. Might not be used in code -->
+			<!-- Type: string -->
+			<name>Mesh1</name>
+			<!-- .obj file containing the vertex and face information of the mesh file. Location given relative to the location of this scene xml file.-->
+			<!-- Only vertex and face rows are supported.-->
+			<!-- Type: string-->
+			<objFile>mesh1.obj</objFile>
+			<!-- 3D Cartesian coordinates indicating the center of the object. -->
+			<!-- Type: double for each --> 
+			<location>
+				<x>0.0</x>
+				<y>-1.234</y>
+				<z>0.0</z>
+			</location>
+			<!-- How much light the object emits. Zero for non-light sources. Value between 0 and 1 for light sources. Might come up with a better name for this parameter. -->
+			<!-- Type: double -->
+			<emissivity>0.5</emissivity>
+		</mesh>
+	</objects>
+	<camera>
+		<!-- 3D Cartesian coordinates indicating the center of the camera. -->
+		<!-- Type: double for each --> 
+		<location>
+			<x>0.0</x>
+			<y>-1.234</y>
+			<z>0.0</z>
+		</location>
+		<!-- Quaternion specifying the rotation of the object -->
+		<!-- Type: double for each -->
+		<rotation>
+			<!-- Real part -->
+			<a>0.0</a>
+			<!-- i multiplier -->
+			<b>0.0</b>
+			<!-- j multiplier -->
+			<c>0.0</c>
+			<!-- k multiplier -->
+			<d>0.0</d>
+		</rotation>
+		<!-- Horizontal resolution. -->
+		<width>800</width>
+		<!-- Vertical resolution. -->
+		<height>800</height>
+		<!-- Horizontal field of view. Vertical can be inferred from resolution. Given in degrees. -->
+		<!-- Type: double -->
+		<fov>110.0</fov>
+		<!-- Maximum recursion depth (how many times rays can bounce) in the scene.-->
+		<maxRecursionDepth>5</maxRecursionDepth>
+	</camera>
+	<!-- Background color of the scene.-->
+	<backgroundColor>
+		<red>1</red>
+		<green>1</green>
+		<blue>1</blue>
+	</backgroundColor>
+</scene>

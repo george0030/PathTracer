@@ -1,0 +1,154 @@
+\hypertarget{group__SceneParser}{}\doxysection{X\+ML scene parser.}
+\label{group__SceneParser}\index{XML scene parser.@{XML scene parser.}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group__SceneParser_ga57e4b436251936b4af65428d853148b7}{parse\+Scene\+From\+File}} (const std\+::string \&file\+Path, \mbox{\hyperlink{classScene}{Scene}} \&scene)
+\begin{DoxyCompactList}\small\item\em Parses a \mbox{\hyperlink{classScene}{Scene}} object from an X\+ML file. See doc/scene\+\_\+sample.\+xml. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classSphere}{Sphere}} $\ast$ \mbox{\hyperlink{group__SceneParser_gaddef8873c107a8c961aedb59f3932a9a}{parse\+Sphere}} (xml\+\_\+node$<$$>$ $\ast$node)
+\begin{DoxyCompactList}\small\item\em Parses a sphere object from X\+ML. \end{DoxyCompactList}\item 
+Vector3d \mbox{\hyperlink{group__SceneParser_gacc5fafa97c10db5ca27a6a43d0083d5e}{parse\+Location}} (xml\+\_\+node$<$$>$ $\ast$node)
+\begin{DoxyCompactList}\small\item\em Parses a location object (3-\/dimensional vector) from X\+ML. \end{DoxyCompactList}\item 
+Vector3d \mbox{\hyperlink{group__SceneParser_ga2c6d8261b716bcfcdf204d26eb144106}{parse\+Color}} (xml\+\_\+node$<$$>$ $\ast$node)
+\begin{DoxyCompactList}\small\item\em Parses a color object (3-\/dimensional vector), x=red, y=green, z=blue from X\+ML. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classPlane}{Plane}} $\ast$ \mbox{\hyperlink{group__SceneParser_gad5f26ed97c63f489ce9c2283607f08e2}{parse\+Plane}} (xml\+\_\+node$<$$>$ $\ast$node)
+\begin{DoxyCompactList}\small\item\em Parses a plane object from X\+ML. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMesh}{Mesh}} $\ast$ \mbox{\hyperlink{group__SceneParser_ga11cb542f1e12a184930a7fe56e51cdd4}{parse\+Mesh}} (xml\+\_\+node$<$$>$ $\ast$node, const std\+::string \&file\+Path)
+\begin{DoxyCompactList}\small\item\em Adds a 3d triangle mesh object from X\+ML. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__SceneParser_ga5d258c1b29c17e0a1b1e75cda83c2c9b}{add\+Faces\+And\+Vertices}} (\mbox{\hyperlink{classMesh}{Mesh}} $\ast$mesh, const std\+::string \&obj\+File)
+\begin{DoxyCompactList}\small\item\em Parses a mesh object from an .obj file. Only faces and vertices are supported. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group__SceneParser_ga5d258c1b29c17e0a1b1e75cda83c2c9b}\label{group__SceneParser_ga5d258c1b29c17e0a1b1e75cda83c2c9b}} 
+\index{XML scene parser.@{XML scene parser.}!addFacesAndVertices@{addFacesAndVertices}}
+\index{addFacesAndVertices@{addFacesAndVertices}!XML scene parser.@{XML scene parser.}}
+\doxysubsubsection{\texorpdfstring{addFacesAndVertices()}{addFacesAndVertices()}}
+{\footnotesize\ttfamily void add\+Faces\+And\+Vertices (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMesh}{Mesh}} $\ast$}]{mesh,  }\item[{const std\+::string \&}]{obj\+File }\end{DoxyParamCaption})}
+
+
+
+Parses a mesh object from an .obj file. Only faces and vertices are supported. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mesh} & The mesh object the vertices and faces are added to \\
+\hline
+{\em obj\+File} & Location of the .obj file. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__SceneParser_ga2c6d8261b716bcfcdf204d26eb144106}\label{group__SceneParser_ga2c6d8261b716bcfcdf204d26eb144106}} 
+\index{XML scene parser.@{XML scene parser.}!parseColor@{parseColor}}
+\index{parseColor@{parseColor}!XML scene parser.@{XML scene parser.}}
+\doxysubsubsection{\texorpdfstring{parseColor()}{parseColor()}}
+{\footnotesize\ttfamily Vector3d parse\+Color (\begin{DoxyParamCaption}\item[{xml\+\_\+node$<$$>$ $\ast$}]{node }\end{DoxyParamCaption})}
+
+
+
+Parses a color object (3-\/dimensional vector), x=red, y=green, z=blue from X\+ML. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em node} & X\+ML node containing the color object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The location object 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__SceneParser_gacc5fafa97c10db5ca27a6a43d0083d5e}\label{group__SceneParser_gacc5fafa97c10db5ca27a6a43d0083d5e}} 
+\index{XML scene parser.@{XML scene parser.}!parseLocation@{parseLocation}}
+\index{parseLocation@{parseLocation}!XML scene parser.@{XML scene parser.}}
+\doxysubsubsection{\texorpdfstring{parseLocation()}{parseLocation()}}
+{\footnotesize\ttfamily Vector3d parse\+Location (\begin{DoxyParamCaption}\item[{xml\+\_\+node$<$$>$ $\ast$}]{node }\end{DoxyParamCaption})}
+
+
+
+Parses a location object (3-\/dimensional vector) from X\+ML. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em node} & X\+ML node containing the location object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The location object 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__SceneParser_ga11cb542f1e12a184930a7fe56e51cdd4}\label{group__SceneParser_ga11cb542f1e12a184930a7fe56e51cdd4}} 
+\index{XML scene parser.@{XML scene parser.}!parseMesh@{parseMesh}}
+\index{parseMesh@{parseMesh}!XML scene parser.@{XML scene parser.}}
+\doxysubsubsection{\texorpdfstring{parseMesh()}{parseMesh()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classMesh}{Mesh}}$\ast$ parse\+Mesh (\begin{DoxyParamCaption}\item[{xml\+\_\+node$<$$>$ $\ast$}]{node,  }\item[{const std\+::string \&}]{file\+Path }\end{DoxyParamCaption})}
+
+
+
+Adds a 3d triangle mesh object from X\+ML. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em node} & X\+ML node containing the 3d triangle mesh object \\
+\hline
+{\em file\+Path} & File path of the X\+ML node. Given to determine .obj file location. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The triangle mesh object 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__SceneParser_gad5f26ed97c63f489ce9c2283607f08e2}\label{group__SceneParser_gad5f26ed97c63f489ce9c2283607f08e2}} 
+\index{XML scene parser.@{XML scene parser.}!parsePlane@{parsePlane}}
+\index{parsePlane@{parsePlane}!XML scene parser.@{XML scene parser.}}
+\doxysubsubsection{\texorpdfstring{parsePlane()}{parsePlane()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classPlane}{Plane}}$\ast$ parse\+Plane (\begin{DoxyParamCaption}\item[{xml\+\_\+node$<$$>$ $\ast$}]{node }\end{DoxyParamCaption})}
+
+
+
+Parses a plane object from X\+ML. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em node} & X\+ML node containing the plane object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The location object 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__SceneParser_ga57e4b436251936b4af65428d853148b7}\label{group__SceneParser_ga57e4b436251936b4af65428d853148b7}} 
+\index{XML scene parser.@{XML scene parser.}!parseSceneFromFile@{parseSceneFromFile}}
+\index{parseSceneFromFile@{parseSceneFromFile}!XML scene parser.@{XML scene parser.}}
+\doxysubsubsection{\texorpdfstring{parseSceneFromFile()}{parseSceneFromFile()}}
+{\footnotesize\ttfamily void parse\+Scene\+From\+File (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{file\+Path,  }\item[{\mbox{\hyperlink{classScene}{Scene}} \&}]{scene }\end{DoxyParamCaption})}
+
+
+
+Parses a \mbox{\hyperlink{classScene}{Scene}} object from an X\+ML file. See doc/scene\+\_\+sample.\+xml. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Path} & File location of the scene file. \\
+\hline
+{\em scene} & Reference to the scene which will be configured according to the xml. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The scene 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__SceneParser_gaddef8873c107a8c961aedb59f3932a9a}\label{group__SceneParser_gaddef8873c107a8c961aedb59f3932a9a}} 
+\index{XML scene parser.@{XML scene parser.}!parseSphere@{parseSphere}}
+\index{parseSphere@{parseSphere}!XML scene parser.@{XML scene parser.}}
+\doxysubsubsection{\texorpdfstring{parseSphere()}{parseSphere()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classSphere}{Sphere}}$\ast$ parse\+Sphere (\begin{DoxyParamCaption}\item[{xml\+\_\+node$<$$>$ $\ast$}]{node }\end{DoxyParamCaption})}
+
+
+
+Parses a sphere object from X\+ML. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em node} & X\+ML node containing the sphere object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The sphere object 
+\end{DoxyReturn}

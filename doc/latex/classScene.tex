@@ -1,0 +1,364 @@
+\hypertarget{classScene}{}\doxysection{Scene Class Reference}
+\label{classScene}\index{Scene@{Scene}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classScene_a47c95b249ec27bbbd8fea8253db3155e}{Add}} (\mbox{\hyperlink{classObject}{Object}} $\ast$obj)
+\begin{DoxyCompactList}\small\item\em Add an object to this scene. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classScene_aa0bac92bb3d69868079d8707d7358558}{Intersection\+With\+Sphere}} (Vector3d rayorig, Vector3d raydir, \mbox{\hyperlink{classSphere}{Sphere}} $\ast$sphere)
+\begin{DoxyCompactList}\small\item\em Calculate the distance from the origin with the specified ray direction to the sphere object. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classScene_a882ec04c13f9e166d457ff308b9aebe5}{Intersection\+With\+Face}} (Vector3d rayorig, Vector3d raydir, \mbox{\hyperlink{classMesh}{Mesh}} $\ast$mesh, const Vector3d \&v0, const Vector3d \&v1, const Vector3d \&v2, Vector3d \&normal)
+\begin{DoxyCompactList}\small\item\em Calculate the distance from the origin with the specified ray direction to a triangular face. \end{DoxyCompactList}\item 
+Vector3d \mbox{\hyperlink{classScene_a6964e5485b1576b5b98b9c0b336fd882}{Trace\+Ray}} (Vector3d rayorig, Vector3d raydir, unsigned int depth)
+\begin{DoxyCompactList}\small\item\em Trace a ray from rayorig to raydir. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classScene_aa90311303d8f734f37cdc03bfe2272d4}{Render}} (sf\+::\+Image \&image)
+\begin{DoxyCompactList}\small\item\em Render a picture from this scene, according to camera settings. To speed up the rendering process, Open\+MP will be used to parallelize the rendering process. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classScene_a9c3e450b183ce23807dcc760a8c046f8}{set\+Camera\+Pos}} (Vector3d pos)
+\begin{DoxyCompactList}\small\item\em Set camera location. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classScene_a8add4a96c73477d9456a476a7372957a}{set\+Camera\+Rotation}} (Quaterniond rotation)
+\begin{DoxyCompactList}\small\item\em Set camera rotation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classScene_aa3ccfb7ca47bcbb8461ef8601edd7a59}{set\+Camera\+Resolution\+Width}} (unsigned int camera\+Resolution\+Width)
+\begin{DoxyCompactList}\small\item\em Set the rendering resolution width. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classScene_aeafa40fc097217d15e34095038b8fff3}{set\+Camera\+Resolution\+Height}} (unsigned int camera\+Resolution\+Height)
+\begin{DoxyCompactList}\small\item\em Set the rendering resolution height. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classScene_a5eee544c95f5e92e136c7c0c09f30d91}{set\+Camera\+Fov}} (double fov)
+\begin{DoxyCompactList}\small\item\em Set the rendering horizontal field of view. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classScene_ac3f4698a281fe4a2b2bf46e415cfa6cc}{set\+Max\+Recursion\+Depth}} (unsigned int max\+Recursion\+Depth)
+\begin{DoxyCompactList}\small\item\em Set the maximum number of bounces for \mbox{\hyperlink{classScene_a6964e5485b1576b5b98b9c0b336fd882}{Trace\+Ray()}} \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classScene_a5c1ee498cc194389c2cfb67096a63e88}{set\+Background\+Color}} (Vector3d color)
+\begin{DoxyCompactList}\small\item\em Set the background color. \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{classScene_ab5e617bc447052c8c7bf17b9c037258b}{get\+Camera\+Resolution\+Width}} () const
+\begin{DoxyCompactList}\small\item\em Get rendering resolution width. \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{classScene_a9a09eb6d7e7aa8588ceb8f7b16378db6}{get\+Camera\+Resolution\+Height}} () const
+\begin{DoxyCompactList}\small\item\em Set the maximum number of bounces for \mbox{\hyperlink{classScene_a6964e5485b1576b5b98b9c0b336fd882}{Trace\+Ray()}} \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{classScene_a58d9bdac82ef098632cc2d96d35af5fb}{get\+Max\+Recursion\+Depth}} () const
+\begin{DoxyCompactList}\small\item\em Get the Max Recursion Depth object. \end{DoxyCompactList}\item 
+Vector3d \mbox{\hyperlink{classScene_a5e8bdb9e8cf306600767cceb17750a8e}{get\+Background\+Color}} () const
+\begin{DoxyCompactList}\small\item\em Get background color. \end{DoxyCompactList}\item 
+const std\+::vector$<$ \mbox{\hyperlink{classObject}{Object}} $\ast$ $>$ \& \mbox{\hyperlink{classScene_a9b1ac17c5214b6c51276990f08837762}{get\+Objects}} ()
+\begin{DoxyCompactList}\small\item\em Get all objects that have been added to the secene. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classObject}{Object}} $\ast$const \mbox{\hyperlink{classScene_a14c4daf56af96bf5c5e206708f13d5d4}{get\+Object\+By\+Name}} (const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em Get an object in the scene by name. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classScene_ab86fcc6275c990de5fdb611dd3052749}{delete\+Object\+By\+Name}} (const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em Delete an object in the scene by name. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classScene_a47c95b249ec27bbbd8fea8253db3155e}\label{classScene_a47c95b249ec27bbbd8fea8253db3155e}} 
+\index{Scene@{Scene}!Add@{Add}}
+\index{Add@{Add}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{Add()}{Add()}}
+{\footnotesize\ttfamily void Scene\+::\+Add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classObject}{Object}} $\ast$}]{obj }\end{DoxyParamCaption})}
+
+
+
+Add an object to this scene. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & The object to be added \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classScene_ab86fcc6275c990de5fdb611dd3052749}\label{classScene_ab86fcc6275c990de5fdb611dd3052749}} 
+\index{Scene@{Scene}!deleteObjectByName@{deleteObjectByName}}
+\index{deleteObjectByName@{deleteObjectByName}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{deleteObjectByName()}{deleteObjectByName()}}
+{\footnotesize\ttfamily bool Scene\+::delete\+Object\+By\+Name (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})}
+
+
+
+Delete an object in the scene by name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true The object was found and deleted successfully. 
+
+false The object was not found and could not be deleted. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classScene_a5e8bdb9e8cf306600767cceb17750a8e}\label{classScene_a5e8bdb9e8cf306600767cceb17750a8e}} 
+\index{Scene@{Scene}!getBackgroundColor@{getBackgroundColor}}
+\index{getBackgroundColor@{getBackgroundColor}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{getBackgroundColor()}{getBackgroundColor()}}
+{\footnotesize\ttfamily Vector3d Scene\+::get\+Background\+Color (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get background color. 
+
+\begin{DoxyReturn}{Returns}
+Background color 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classScene_a9a09eb6d7e7aa8588ceb8f7b16378db6}\label{classScene_a9a09eb6d7e7aa8588ceb8f7b16378db6}} 
+\index{Scene@{Scene}!getCameraResolutionHeight@{getCameraResolutionHeight}}
+\index{getCameraResolutionHeight@{getCameraResolutionHeight}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{getCameraResolutionHeight()}{getCameraResolutionHeight()}}
+{\footnotesize\ttfamily unsigned int Scene\+::get\+Camera\+Resolution\+Height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Set the maximum number of bounces for \mbox{\hyperlink{classScene_a6964e5485b1576b5b98b9c0b336fd882}{Trace\+Ray()}} 
+
+\begin{DoxyReturn}{Returns}
+Maximum recursion depth 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classScene_ab5e617bc447052c8c7bf17b9c037258b}\label{classScene_ab5e617bc447052c8c7bf17b9c037258b}} 
+\index{Scene@{Scene}!getCameraResolutionWidth@{getCameraResolutionWidth}}
+\index{getCameraResolutionWidth@{getCameraResolutionWidth}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{getCameraResolutionWidth()}{getCameraResolutionWidth()}}
+{\footnotesize\ttfamily unsigned int Scene\+::get\+Camera\+Resolution\+Width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get rendering resolution width. 
+
+\begin{DoxyReturn}{Returns}
+Width in pixels 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classScene_a58d9bdac82ef098632cc2d96d35af5fb}\label{classScene_a58d9bdac82ef098632cc2d96d35af5fb}} 
+\index{Scene@{Scene}!getMaxRecursionDepth@{getMaxRecursionDepth}}
+\index{getMaxRecursionDepth@{getMaxRecursionDepth}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{getMaxRecursionDepth()}{getMaxRecursionDepth()}}
+{\footnotesize\ttfamily unsigned int Scene\+::get\+Max\+Recursion\+Depth (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the Max Recursion Depth object. 
+
+\begin{DoxyReturn}{Returns}
+unsigned int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classScene_a14c4daf56af96bf5c5e206708f13d5d4}\label{classScene_a14c4daf56af96bf5c5e206708f13d5d4}} 
+\index{Scene@{Scene}!getObjectByName@{getObjectByName}}
+\index{getObjectByName@{getObjectByName}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{getObjectByName()}{getObjectByName()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classObject}{Object}} $\ast$const Scene\+::get\+Object\+By\+Name (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})}
+
+
+
+Get an object in the scene by name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of the object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An object by the name name. If the object is not found, nullptr is returned. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classScene_a9b1ac17c5214b6c51276990f08837762}\label{classScene_a9b1ac17c5214b6c51276990f08837762}} 
+\index{Scene@{Scene}!getObjects@{getObjects}}
+\index{getObjects@{getObjects}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{getObjects()}{getObjects()}}
+{\footnotesize\ttfamily const std\+::vector$<$ \mbox{\hyperlink{classObject}{Object}} $\ast$ $>$ \& Scene\+::get\+Objects (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get all objects that have been added to the secene. 
+
+\begin{DoxyReturn}{Returns}
+Vector of objects in the scene. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classScene_a882ec04c13f9e166d457ff308b9aebe5}\label{classScene_a882ec04c13f9e166d457ff308b9aebe5}} 
+\index{Scene@{Scene}!IntersectionWithFace@{IntersectionWithFace}}
+\index{IntersectionWithFace@{IntersectionWithFace}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{IntersectionWithFace()}{IntersectionWithFace()}}
+{\footnotesize\ttfamily double Scene\+::\+Intersection\+With\+Face (\begin{DoxyParamCaption}\item[{Vector3d}]{rayorig,  }\item[{Vector3d}]{raydir,  }\item[{\mbox{\hyperlink{classMesh}{Mesh}} $\ast$}]{mesh,  }\item[{const Vector3d \&}]{v0,  }\item[{const Vector3d \&}]{v1,  }\item[{const Vector3d \&}]{v2,  }\item[{Vector3d \&}]{normal }\end{DoxyParamCaption})}
+
+
+
+Calculate the distance from the origin with the specified ray direction to a triangular face. 
+
+/$\ast$$\ast$ 
+\begin{DoxyParams}{Parameters}
+{\em rayorig} & Ray origin \\
+\hline
+{\em raydir} & Ray direction \\
+\hline
+{\em mesh} & \mbox{\hyperlink{classMesh}{Mesh}} object that the triangle is a part of \\
+\hline
+{\em v0} & First face-\/defining vertex \\
+\hline
+{\em v1} & Second face-\/defining vertex \\
+\hline
+{\em v2} & Third face-\/defining vertex \\
+\hline
+{\em normal} & Normal vector of the face \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Distance from the ray origin to the face. If the ray does not intersect, -\/1 is returned. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classScene_aa0bac92bb3d69868079d8707d7358558}\label{classScene_aa0bac92bb3d69868079d8707d7358558}} 
+\index{Scene@{Scene}!IntersectionWithSphere@{IntersectionWithSphere}}
+\index{IntersectionWithSphere@{IntersectionWithSphere}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{IntersectionWithSphere()}{IntersectionWithSphere()}}
+{\footnotesize\ttfamily double Scene\+::\+Intersection\+With\+Sphere (\begin{DoxyParamCaption}\item[{Vector3d}]{rayorig,  }\item[{Vector3d}]{raydir,  }\item[{\mbox{\hyperlink{classSphere}{Sphere}} $\ast$}]{sphere }\end{DoxyParamCaption})}
+
+
+
+Calculate the distance from the origin with the specified ray direction to the sphere object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rayorig} & Ray origin \\
+\hline
+{\em raydir} & Ray direction \\
+\hline
+{\em sphere} & \mbox{\hyperlink{classSphere}{Sphere}} object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Distance from the ray origin to the object. If the ray does not intersect, -\/1 is returned. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classScene_aa90311303d8f734f37cdc03bfe2272d4}\label{classScene_aa90311303d8f734f37cdc03bfe2272d4}} 
+\index{Scene@{Scene}!Render@{Render}}
+\index{Render@{Render}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{Render()}{Render()}}
+{\footnotesize\ttfamily void Scene\+::\+Render (\begin{DoxyParamCaption}\item[{sf\+::\+Image \&}]{image }\end{DoxyParamCaption})}
+
+
+
+Render a picture from this scene, according to camera settings. To speed up the rendering process, Open\+MP will be used to parallelize the rendering process. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em image} & S\+F\+ML image where to write the rendered scene. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classScene_a5c1ee498cc194389c2cfb67096a63e88}\label{classScene_a5c1ee498cc194389c2cfb67096a63e88}} 
+\index{Scene@{Scene}!setBackgroundColor@{setBackgroundColor}}
+\index{setBackgroundColor@{setBackgroundColor}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{setBackgroundColor()}{setBackgroundColor()}}
+{\footnotesize\ttfamily void Scene\+::set\+Background\+Color (\begin{DoxyParamCaption}\item[{Vector3d}]{color }\end{DoxyParamCaption})}
+
+
+
+Set the background color. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em color} & Background color \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classScene_a5eee544c95f5e92e136c7c0c09f30d91}\label{classScene_a5eee544c95f5e92e136c7c0c09f30d91}} 
+\index{Scene@{Scene}!setCameraFov@{setCameraFov}}
+\index{setCameraFov@{setCameraFov}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{setCameraFov()}{setCameraFov()}}
+{\footnotesize\ttfamily void Scene\+::set\+Camera\+Fov (\begin{DoxyParamCaption}\item[{double}]{fov }\end{DoxyParamCaption})}
+
+
+
+Set the rendering horizontal field of view. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fov} & Horizontal field of view, in degrees \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classScene_a9c3e450b183ce23807dcc760a8c046f8}\label{classScene_a9c3e450b183ce23807dcc760a8c046f8}} 
+\index{Scene@{Scene}!setCameraPos@{setCameraPos}}
+\index{setCameraPos@{setCameraPos}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{setCameraPos()}{setCameraPos()}}
+{\footnotesize\ttfamily void Scene\+::set\+Camera\+Pos (\begin{DoxyParamCaption}\item[{Vector3d}]{pos }\end{DoxyParamCaption})}
+
+
+
+Set camera location. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & Camera location \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classScene_aeafa40fc097217d15e34095038b8fff3}\label{classScene_aeafa40fc097217d15e34095038b8fff3}} 
+\index{Scene@{Scene}!setCameraResolutionHeight@{setCameraResolutionHeight}}
+\index{setCameraResolutionHeight@{setCameraResolutionHeight}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{setCameraResolutionHeight()}{setCameraResolutionHeight()}}
+{\footnotesize\ttfamily void Scene\+::set\+Camera\+Resolution\+Height (\begin{DoxyParamCaption}\item[{unsigned int}]{camera\+Resolution\+Height }\end{DoxyParamCaption})}
+
+
+
+Set the rendering resolution height. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em camera\+Resolution\+Height} & Height in pixels \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classScene_aa3ccfb7ca47bcbb8461ef8601edd7a59}\label{classScene_aa3ccfb7ca47bcbb8461ef8601edd7a59}} 
+\index{Scene@{Scene}!setCameraResolutionWidth@{setCameraResolutionWidth}}
+\index{setCameraResolutionWidth@{setCameraResolutionWidth}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{setCameraResolutionWidth()}{setCameraResolutionWidth()}}
+{\footnotesize\ttfamily void Scene\+::set\+Camera\+Resolution\+Width (\begin{DoxyParamCaption}\item[{unsigned int}]{camera\+Resolution\+Width }\end{DoxyParamCaption})}
+
+
+
+Set the rendering resolution width. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em camera\+Resolution\+Width} & Width in pixels \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classScene_a8add4a96c73477d9456a476a7372957a}\label{classScene_a8add4a96c73477d9456a476a7372957a}} 
+\index{Scene@{Scene}!setCameraRotation@{setCameraRotation}}
+\index{setCameraRotation@{setCameraRotation}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{setCameraRotation()}{setCameraRotation()}}
+{\footnotesize\ttfamily void Scene\+::set\+Camera\+Rotation (\begin{DoxyParamCaption}\item[{Quaterniond}]{rotation }\end{DoxyParamCaption})}
+
+
+
+Set camera rotation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rotation} & Camera rotation \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classScene_ac3f4698a281fe4a2b2bf46e415cfa6cc}\label{classScene_ac3f4698a281fe4a2b2bf46e415cfa6cc}} 
+\index{Scene@{Scene}!setMaxRecursionDepth@{setMaxRecursionDepth}}
+\index{setMaxRecursionDepth@{setMaxRecursionDepth}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{setMaxRecursionDepth()}{setMaxRecursionDepth()}}
+{\footnotesize\ttfamily void Scene\+::set\+Max\+Recursion\+Depth (\begin{DoxyParamCaption}\item[{unsigned int}]{max\+Recursion\+Depth }\end{DoxyParamCaption})}
+
+
+
+Set the maximum number of bounces for \mbox{\hyperlink{classScene_a6964e5485b1576b5b98b9c0b336fd882}{Trace\+Ray()}} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em max\+Recursion\+Depth} & Maximum recursion depth \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classScene_a6964e5485b1576b5b98b9c0b336fd882}\label{classScene_a6964e5485b1576b5b98b9c0b336fd882}} 
+\index{Scene@{Scene}!TraceRay@{TraceRay}}
+\index{TraceRay@{TraceRay}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{TraceRay()}{TraceRay()}}
+{\footnotesize\ttfamily Vector3d Scene\+::\+Trace\+Ray (\begin{DoxyParamCaption}\item[{Vector3d}]{rayorig,  }\item[{Vector3d}]{raydir,  }\item[{unsigned int}]{depth }\end{DoxyParamCaption})}
+
+
+
+Trace a ray from rayorig to raydir. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rayorig} & Origin of the ray \\
+\hline
+{\em raydir} & Direction of the ray \\
+\hline
+{\em depth} & Maximum number of bounces for the ray \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vector3d 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/akseli/cpp-\/autumn2021/path-\/tracing-\/2/src/scene.\+hpp\item 
+/home/akseli/cpp-\/autumn2021/path-\/tracing-\/2/src/scene.\+cpp\end{DoxyCompactItemize}

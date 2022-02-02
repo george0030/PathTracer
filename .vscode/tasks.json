@@ -1,0 +1,163 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build_debug",
+            "type": "shell",
+            "command": "cd debug && cmake -DCMAKE_BUILD_TYPE=Debug .. && make",
+            "windows": {
+                "command": "cd debug; cmake -DCMAKE_BUILD_TYPE=Debug ..; mingw32-make"
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [
+                {
+                    "owner": "cpp",
+                    "fileLocation": [
+                        "relative",
+                        "${workspaceFolder}"
+                    ],
+                    "pattern": {
+                        "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$",
+                        "file": 1,
+                        "line": 2,
+                        "column": 3,
+                        "severity": 4,
+                        "message": 5
+                    }
+                }
+            ]
+        },
+        {
+            "label": "build_release",
+            "type": "shell",
+            "command": "cd build && cmake -DCMAKE_BUILD_TYPE=Release .. && make",
+            "windows": {
+                "command": "cd build; cmake -DCMAKE_BUILD_TYPE=Release ..; mingw32-make"
+            },
+            "group": "build",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [
+                {
+                    "owner": "cpp",
+                    "fileLocation": [
+                        "relative",
+                        "${workspaceFolder}"
+                    ],
+                    "pattern": {
+                        "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$",
+                        "file": 1,
+                        "line": 2,
+                        "column": 3,
+                        "severity": 4,
+                        "message": 5
+                    }
+                }
+            ]
+        },
+        {
+            "label": "clean_debug",
+            "type": "shell",
+            "command": "cd debug && make clean",
+            "args": [],
+            "windows": {
+                "command": "cd debug; mingw32-make clean"
+            },
+            "group": "build",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [
+                {
+                    "owner": "cpp",
+                    "fileLocation": [
+                        "relative",
+                        "${workspaceFolder}/src/"
+                    ],
+                    "pattern": {
+                        "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$",
+                        "file": 1,
+                        "line": 2,
+                        "column": 3,
+                        "severity": 4,
+                        "message": 5
+                    }
+                }
+            ]
+        },
+        {
+            "label": "clean_release",
+            "type": "shell",
+            "command": "cd build && make clean",
+            "args": [],
+            "windows": {
+                "command": "cd build; mingw32-make clean"
+            },
+            "group": "build",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [
+                {
+                    "owner": "cpp",
+                    "fileLocation": [
+                        "relative",
+                        "${workspaceFolder}/src/"
+                    ],
+                    "pattern": {
+                        "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$",
+                        "file": 1,
+                        "line": 2,
+                        "column": 3,
+                        "severity": 4,
+                        "message": 5
+                    }
+                }
+            ]
+        },
+        {
+            "label": "Valgrind",
+            "type": "shell",
+            "command": "valgrind",
+            "args": [
+                "--trace-children=yes",
+                "--leak-check=full",
+                "--show-leak-kinds=all",
+                "${workspaceFolder}/debug/PathTracer",
+                "${workspaceFolder}/debug/debug_scene.xml",
+                "${workspaceFolder}/debug/debug_out.jpg"
+            ],
+            "group": "build",
+            "dependsOn": [
+                "build_debug"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [
+                {
+                    "owner": "cpp",
+                    "fileLocation": [
+                        "relative",
+                        "${workspaceFolder}/src"
+                    ],
+                    "pattern": {
+                        "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$",
+                        "file": 1,
+                        "line": 2,
+                        "column": 3,
+                        "severity": 4,
+                        "message": 5
+                    }
+                }
+            ]
+        }
+    ]
+}

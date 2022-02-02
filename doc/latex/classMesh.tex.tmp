@@ -1,0 +1,122 @@
+\hypertarget{classMesh}{}\doxysection{Mesh Class Reference}
+\label{classMesh}\index{Mesh@{Mesh}}
+
+
+{\ttfamily \#include $<$mesh\+\_\+object.\+hpp$>$}
+
+
+
+Inheritance diagram for Mesh\+:
+% FIG 0
+
+
+Collaboration diagram for Mesh\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classMesh_abc9910677c23466ceb51cc77eff85fbb}\label{classMesh_abc9910677c23466ceb51cc77eff85fbb}} 
+{\bfseries Mesh} (const std\+::string \&name, Vector3d pos, Vector3d color, Vector3d emissivity, double reflectivity)
+\item 
+unsigned int \mbox{\hyperlink{classMesh_a6469969b46eb7fd0e5b10194672bc685}{Add\+Vertex}} (Vector3d relative\+Location)
+\begin{DoxyCompactList}\small\item\em Add a vertex to the mesh. \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{classMesh_a46bf3e49d598e19704fe15f90667d7ae}{Add\+Face}} (\mbox{\hyperlink{structFace}{Face}} face)
+\begin{DoxyCompactList}\small\item\em Add a face to the triangle mesh. \end{DoxyCompactList}\item 
+Vector3d \mbox{\hyperlink{classMesh_aab6da139d681698e468e086e6470ee5b}{Get\+Vertex}} (unsigned int index) const
+\begin{DoxyCompactList}\small\item\em Get the relative vertex location by index. \end{DoxyCompactList}\item 
+const std\+::vector$<$ \mbox{\hyperlink{structFace}{Face}} $>$ \& \mbox{\hyperlink{classMesh_a691191394af115e9b92c074b9ae3b06e}{Get\+Faces}} ()
+\begin{DoxyCompactList}\small\item\em Get all faces that this triangle mesh contains. \end{DoxyCompactList}\item 
+Object\+\_\+\+Type \mbox{\hyperlink{classMesh_a708a111294a638799c5df045d8bb7875}{Get\+Type}} () const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a 3d triangle mesh object. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classMesh_a46bf3e49d598e19704fe15f90667d7ae}\label{classMesh_a46bf3e49d598e19704fe15f90667d7ae}} 
+\index{Mesh@{Mesh}!AddFace@{AddFace}}
+\index{AddFace@{AddFace}!Mesh@{Mesh}}
+\doxysubsubsection{\texorpdfstring{AddFace()}{AddFace()}}
+{\footnotesize\ttfamily unsigned int Mesh\+::\+Add\+Face (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structFace}{Face}}}]{face }\end{DoxyParamCaption})}
+
+
+
+Add a face to the triangle mesh. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em face} & \mbox{\hyperlink{structFace}{Face}} (collection of 3 vertices by index) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{structFace}{Face}} index 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMesh_a6469969b46eb7fd0e5b10194672bc685}\label{classMesh_a6469969b46eb7fd0e5b10194672bc685}} 
+\index{Mesh@{Mesh}!AddVertex@{AddVertex}}
+\index{AddVertex@{AddVertex}!Mesh@{Mesh}}
+\doxysubsubsection{\texorpdfstring{AddVertex()}{AddVertex()}}
+{\footnotesize\ttfamily unsigned int Mesh\+::\+Add\+Vertex (\begin{DoxyParamCaption}\item[{Vector3d}]{relative\+Location }\end{DoxyParamCaption})}
+
+
+
+Add a vertex to the mesh. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em relative\+Location} & Relative location of the vertex from the mesh origin (0,0,0) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+unsigned int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMesh_a691191394af115e9b92c074b9ae3b06e}\label{classMesh_a691191394af115e9b92c074b9ae3b06e}} 
+\index{Mesh@{Mesh}!GetFaces@{GetFaces}}
+\index{GetFaces@{GetFaces}!Mesh@{Mesh}}
+\doxysubsubsection{\texorpdfstring{GetFaces()}{GetFaces()}}
+{\footnotesize\ttfamily const std\+::vector$<$ \mbox{\hyperlink{structFace}{Face}} $>$ \& Mesh\+::\+Get\+Faces (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get all faces that this triangle mesh contains. 
+
+\begin{DoxyReturn}{Returns}
+Collection of faces by vertex index 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMesh_a708a111294a638799c5df045d8bb7875}\label{classMesh_a708a111294a638799c5df045d8bb7875}} 
+\index{Mesh@{Mesh}!GetType@{GetType}}
+\index{GetType@{GetType}!Mesh@{Mesh}}
+\doxysubsubsection{\texorpdfstring{GetType()}{GetType()}}
+{\footnotesize\ttfamily Object\+\_\+\+Type Mesh\+::\+Get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+object type. Used for type differentiation in \mbox{\hyperlink{classScene_aa90311303d8f734f37cdc03bfe2272d4}{Scene.\+Render()}}. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classObject_a9595f8ec9813ca76a7f67c9b507e7785}{Object}}.
+
+\mbox{\Hypertarget{classMesh_aab6da139d681698e468e086e6470ee5b}\label{classMesh_aab6da139d681698e468e086e6470ee5b}} 
+\index{Mesh@{Mesh}!GetVertex@{GetVertex}}
+\index{GetVertex@{GetVertex}!Mesh@{Mesh}}
+\doxysubsubsection{\texorpdfstring{GetVertex()}{GetVertex()}}
+{\footnotesize\ttfamily Vector3d Mesh\+::\+Get\+Vertex (\begin{DoxyParamCaption}\item[{unsigned int}]{index }\end{DoxyParamCaption}) const}
+
+
+
+Get the relative vertex location by index. 
+
+Add a face to the mesh. 
+\begin{DoxyParams}{Parameters}
+{\em index} & Vertex index \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vector3d Relative location of the vertex from the mesh origin (0,0,0) 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/akseli/cpp-\/autumn2021/path-\/tracing-\/2/src/mesh\+\_\+object.\+hpp\item 
+/home/akseli/cpp-\/autumn2021/path-\/tracing-\/2/src/mesh\+\_\+object.\+cpp\end{DoxyCompactItemize}

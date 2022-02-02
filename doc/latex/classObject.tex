@@ -1,0 +1,122 @@
+\hypertarget{classObject}{}\doxysection{Object Class Reference}
+\label{classObject}\index{Object@{Object}}
+
+
+Represents a renderable 3d object.  
+
+
+
+
+{\ttfamily \#include $<$object.\+hpp$>$}
+
+
+
+Inheritance diagram for Object\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classObject_ad8e7d46ec34894db1d604802e95d6068}{Object}} (const std\+::string \&name, Vector3d pos, Vector3d color, Vector3d emissivity, double reflectivity)
+\begin{DoxyCompactList}\small\item\em Construct a new 3d object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classObject_a0510be5b4677b8b2dbf40100fd4b3afd}\label{classObject_a0510be5b4677b8b2dbf40100fd4b3afd}} 
+const std\+::string \& {\bfseries Get\+Name} () const
+\item 
+Vector3d \mbox{\hyperlink{classObject_a55e7e41b0ef206720b7366bbe491651f}{Get\+Position}} () const
+\item 
+Vector3d \mbox{\hyperlink{classObject_a4103fe83a3c558598977347fa5441631}{Get\+Color}} () const
+\item 
+Vector3d \mbox{\hyperlink{classObject_a88bde57c5c32fe2c1f233b9b6b20e6aa}{Get\+Emissivity\+Color}} () const
+\item 
+double \mbox{\hyperlink{classObject_abb5d52b70652a9ee33af29d1239874f0}{Get\+Reflectivity}} () const
+\item 
+virtual Object\+\_\+\+Type \mbox{\hyperlink{classObject_a9595f8ec9813ca76a7f67c9b507e7785}{Get\+Type}} () const =0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a renderable 3d object. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classObject_ad8e7d46ec34894db1d604802e95d6068}\label{classObject_ad8e7d46ec34894db1d604802e95d6068}} 
+\index{Object@{Object}!Object@{Object}}
+\index{Object@{Object}!Object@{Object}}
+\doxysubsubsection{\texorpdfstring{Object()}{Object()}}
+{\footnotesize\ttfamily Object\+::\+Object (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{Vector3d}]{pos,  }\item[{Vector3d}]{color,  }\item[{Vector3d}]{emissivity,  }\item[{double}]{reflectivity }\end{DoxyParamCaption})}
+
+
+
+Construct a new 3d object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & \mbox{\hyperlink{classObject}{Object}} name. \\
+\hline
+{\em pos} & \mbox{\hyperlink{classObject}{Object}} origin location. For spheres, this is the center point. \\
+\hline
+{\em color} & \mbox{\hyperlink{structColor}{Color}} of the object, x=red, y=green, z=blue. \\
+\hline
+{\em emissivity} & The color of the light that this object emits. 0,0,0 = black \\
+\hline
+{\em reflectivity} & Amount of light this object reflects. 0.\+0 = none, 1.\+0 = mirror \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classObject_a4103fe83a3c558598977347fa5441631}\label{classObject_a4103fe83a3c558598977347fa5441631}} 
+\index{Object@{Object}!GetColor@{GetColor}}
+\index{GetColor@{GetColor}!Object@{Object}}
+\doxysubsubsection{\texorpdfstring{GetColor()}{GetColor()}}
+{\footnotesize\ttfamily Vector3d Object\+::\+Get\+Color (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classObject}{Object}} color 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classObject_a88bde57c5c32fe2c1f233b9b6b20e6aa}\label{classObject_a88bde57c5c32fe2c1f233b9b6b20e6aa}} 
+\index{Object@{Object}!GetEmissivityColor@{GetEmissivityColor}}
+\index{GetEmissivityColor@{GetEmissivityColor}!Object@{Object}}
+\doxysubsubsection{\texorpdfstring{GetEmissivityColor()}{GetEmissivityColor()}}
+{\footnotesize\ttfamily Vector3d Object\+::\+Get\+Emissivity\+Color (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+The color of the light that this object emits. 0,0,0 = black 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classObject_a55e7e41b0ef206720b7366bbe491651f}\label{classObject_a55e7e41b0ef206720b7366bbe491651f}} 
+\index{Object@{Object}!GetPosition@{GetPosition}}
+\index{GetPosition@{GetPosition}!Object@{Object}}
+\doxysubsubsection{\texorpdfstring{GetPosition()}{GetPosition()}}
+{\footnotesize\ttfamily Vector3d Object\+::\+Get\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classObject}{Object}} origin location 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classObject_abb5d52b70652a9ee33af29d1239874f0}\label{classObject_abb5d52b70652a9ee33af29d1239874f0}} 
+\index{Object@{Object}!GetReflectivity@{GetReflectivity}}
+\index{GetReflectivity@{GetReflectivity}!Object@{Object}}
+\doxysubsubsection{\texorpdfstring{GetReflectivity()}{GetReflectivity()}}
+{\footnotesize\ttfamily double Object\+::\+Get\+Reflectivity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+Amount of light this object reflects. 0.\+0 = none, 1.\+0 = mirror 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classObject_a9595f8ec9813ca76a7f67c9b507e7785}\label{classObject_a9595f8ec9813ca76a7f67c9b507e7785}} 
+\index{Object@{Object}!GetType@{GetType}}
+\index{GetType@{GetType}!Object@{Object}}
+\doxysubsubsection{\texorpdfstring{GetType()}{GetType()}}
+{\footnotesize\ttfamily virtual Object\+\_\+\+Type Object\+::\+Get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\begin{DoxyReturn}{Returns}
+object type. Used for type differentiation in \mbox{\hyperlink{classScene_aa90311303d8f734f37cdc03bfe2272d4}{Scene.\+Render()}}. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classMesh_a708a111294a638799c5df045d8bb7875}{Mesh}}, \mbox{\hyperlink{classSphere_a638e9d02aaff226962077e3bc7e5fb9f}{Sphere}}, and \mbox{\hyperlink{classPlane_ac415daa860fcb0e8e8616a4d4fdb2002}{Plane}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/akseli/cpp-\/autumn2021/path-\/tracing-\/2/src/object.\+hpp\item 
+/home/akseli/cpp-\/autumn2021/path-\/tracing-\/2/src/object.\+cpp\end{DoxyCompactItemize}
